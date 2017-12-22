@@ -1,6 +1,6 @@
-# ViaCEP - Angular 4.X
+# ViaCEP - Angular 2.X/4.X
 
-This is the repository of the ViaCEP (Angular 4.X) application
+This is the repository of the ViaCEP (Angular 2.X/4.X) application
 
 ### See Online
 Demo [here](http://insidecode.com.br/viacep/)
