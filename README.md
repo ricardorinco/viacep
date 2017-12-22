@@ -30,3 +30,13 @@ $ ng serve
 ```sh
 http://localhost:4200
 ```
+
+### Dependencies
+
+This application is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+
+| Package | Documentation |
+| ------ | ------ |
+| angular2-text-mask | https://www.npmjs.com/package/angular2-text-mask |
+| ngx-bootstrap | https://www.npmjs.com/package/ngx-bootstrap |
+| ngx-toastr | https://www.npmjs.com/package/ngx-toastr |
