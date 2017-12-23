@@ -18,22 +18,40 @@ export class AppComponent {
 
   constructor(
     private toastr: ToastrService,
-    private viacepService: ViaCepService
+    private viaCepService: ViaCepService
   ) { }
 
   onClickZipcode(zipcode: string) {
-    this.viacepService.getAddressByZipCode(zipcode)
-      .subscribe(
-        address => {
-          if (address.erro === true) {
+    zipcode = zipcode.replace('-', '');
+
+    if (this.verifyZipcode(zipcode)) {
+      this.viaCepService.getAddressByZipCode(zipcode)
+        .subscribe(
+          address => {
+            if (address.erro === true) {
+              this.searchAddress = undefined;
+              this.toastr.warning('ZIP Code not found.', 'Ops...');
+            } else {
+              this.searchAddress = address;
+            }
+          },
+          error => {
+            this.toastr.error('Error: ${error.message}.', 'Ops...');
             this.searchAddress = undefined;
-            this.toastr.warning('ZIP Code not found.', 'Ops...');
-          } else {
-            this.searchAddress = address;
           }
-        },
-        error => { this.toastr.error('Error: Enter a valid ZIP Code.', 'Ops...'); }
-      );
+        );
+    } else {
+      this.toastr.error('Enter a valid ZIP Code.', 'Ops...');
+      this.searchAddress = undefined;
+    }
+  }
+
+  verifyZipcode(zipcode: string): boolean {
+    if (zipcode.length === 8) {
+      return true;
+    }
+
+    return false;
   }
 
 }

@@ -8,16 +8,15 @@
                 <div class="col-md-6 offset-md-3">
                     <div class="card card-outline-secondary">
                         <div class="card-header">
-                            <h3 class="mb-0">Login</h3>
+                            <h3 class="mb-0">ZIP Code</h3>
                         </div>
                         <div class="card-block">
                             <form class="form" novalidate>
                                 <div class="form-group">
-                                    <label for="zipcode">ZIP Code</label>
-                                    <input #zipcode class="form-control" id="zipcode" type="text" placeholder="ZIP Code (required)" [(ngModel)]="zipcodeModel" [textMask]="{mask: zipcodeMask, placeholderChar: '\u2000', guide: false }" [ngModelOptions]="{standalone: true}" required="" />
+                                    <input #zipcode class="form-control" id="zipcode" type="text" placeholder="Enter a valid ZIP Code." [(ngModel)]="zipcodeModel" [textMask]="{mask: zipcodeMask, placeholderChar: '\u2000', guide: false }" [ngModelOptions]="{standalone: true}" required="" />
                                 </div>
 
-                                <button (click)="onClickZipcode(zipcode.value)" type="button" class="btn btn-success btn-lg float-right">Find</button>
+                                <button (click)="onClickZipcode(zipcode.value)" type="button" class="btn btn-info btn-lg float-right"><i class="fa fa-search" aria-hidden="true"></i> Find</button>
                             </form>
                         </div>
                     </div>
