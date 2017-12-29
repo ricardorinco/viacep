@@ -12,7 +12,7 @@ import { Address } from './models/address.model';
 export class AppComponent {
 
   zipcodeModel = '';
-  zipcodeMask = [/[1-9]/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
+  zipcodeMask = [/[0-9]/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
 
   searchAddress: Address;
 
