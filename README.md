@@ -1,3 +1,5 @@
+> **1 João 2:4** "Aquele que diz: Eu conheço-o, e não guarda os seus mandamentos, é mentiroso, e nele não está a verdade."
+
 # ViaCEP - Angular 2.X/4.X
 
 This is the repository of the ViaCEP (Angular 2.X/4.X) application
